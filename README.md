@@ -1,5 +1,8 @@
 # FIB Laravel Payment SDK
 
+> **⚠️ Fork Notice:** This is a community fork of [First-Iraqi-Bank/fib-laravel-payment-sdk](https://github.com/First-Iraqi-Bank/fib-laravel-payment-sdk).
+> **Fix applied in v1.9.1:** Broadened `guzzlehttp/guzzle` constraint from `^7.0` to `^7.0|^8.0` to fix installation conflicts in projects using Guzzle 8.x.
+
 The FIB Laravel Payment SDK provides a seamless integration with the FIB payment system for Laravel applications, enabling secure and efficient payment transactions and refund handling.
 
 **Table of Contents**
@@ -35,13 +38,25 @@ The FIB Laravel Payment SDK provides a seamless integration with the FIB payment
 
 - PHP 8.2 or higher
 - Laravel 10, 11, 12, or 13
+- Guzzle 7.x or 8.x
 
 ## Installation
 
-To integrate the SDK into your Laravel project, install it via Composer:
+Add this fork as a VCS repository in your project's `composer.json`:
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/a4hmad1/fib-laravel-payment-sdk"
+    }
+]
+```
+
+Then install via Composer:
 
 ```bash
-composer require First-Iraqi-Bank/fib-laravel-payment-sdk
+composer require first-iraqi-bank/fib-laravel-payment-sdk:^1.9
 ```
 
 ### Alternative Installation (Without Composer)
